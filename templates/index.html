@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href=" {% static 'main.css' %}">
+    </head>
+    <body>
+
+    <nav>
+        <ul>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact me</a></li>
+        </ul>
+    </nav>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Elujoba Folorunso </h1>
+            <p>hrfunsojoba@gmail.com</p>
+        </div>
+        <div class="container">
+            <div class="title">
+                <h4>About Me</h4>
+            </div>
+            <p>As a software engineer, my ultimate goal is to solve problems in the most
+            effective and efficient way possible. For me, technology is a powerful tool
+            in my hands to achieving this goal and this is why I love being a software
+            engineer.</p>
+        </div>
+        
+        <div class="container" id="experience">
+            <div class="title">
+                <h4>Experience</h4>
+            </div>
+            <div class="container-content">
+                <h3>God’s Love Tabernacle International Church, Lagos -<em> Web Developer</em></h3>
+                <small>March 2019 - March 2021</small>
+                <ul>
+                    <li>Responsible for building and maintaining the organization’s websites</li>
+                </ul>
+            </div>
+            <div class="container-content">
+                <h3>Decagon, Lagos - <em> Software Engineer </em></h3>
+                <small>March 2021 - Sept 2021</small>
+                <ul>
+                    <li>Built projects with React/Redux, and Python/Django</li>
+                    <li>Handled Database Management System with SQL like MySQL,
+                    Postgres</li>
+                    <li>Experience writing unit and integration test</li>
+                    <li>Experience with software lifecycle from development to deployment</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container" id="education">
+            <div class="title">
+                <h4>Education</h4>
+            </div>
+            <div class="container-content">
+                <h3>Obafemi Awolowo University</em></h3>
+                <small>B.Sc Psychology | 2015/2016</small>
+            </div>
+            
+        </div>
+
+        <div class="container" id="contact">
+            <div class="title">
+                <h4>Contact Me</h4>
+            </div>
+            <div class="form">
+                <form>
+                {% csrf_token %}
+                    <div class="form-group">
+                        <div class="form-control">
+                            <label for="name">Name</label><br>
+                            <input name="name" type="text" id="name" required placeholder="John Doe" />
+                        </div>
+                        <div class="form-control">
+                            <label for="name">Email</label><br>
+                            <input name="email" type="email" id="email" required placeholder="johndoe@email.com" />
+                        </div>
+                        <div class="form-control">
+                            <label for="name">Subject</label><br>
+                            <input name="subject" type="text" id="subject" required placeholder="Let's talk" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-control">
+                            <label for="message">Message</label><br>
+                            <textarea id="message"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-control">
+                            <button type="submit" name="submit">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </form>
+        </div>
+
+    </div>
+</div>
+        
+        <div class="footer">
+            <ul>
+                <li><a href="https://www.twitter.com/funsojoba" target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/funso-joba-784b2914b/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a></li>
+                <li><a href="https://github.com/funsojoba" target="_blank"><i class="fab fa-github fa-lg"></i></a></li>
+            </ul>
+        </div>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
