@@ -1,0 +1,25 @@
+.message{
+    z-index: 20;
+    transition: all ease-in 300ms;
+}
+
+.alert{
+	padding:10px;
+}
+
+.alert.alert-success{
+	background:#e0ff98;
+	color:#178a00
+}
+.alert.alert-error{
+	background:#ff98e5;
+	color:#8a0039
+}
+.alert.alert-warning{
+	background:#f0ff98;
+	color:#8a8100
+}
+.alert.alert-info{
+	background:#98cdff;
+	color:#002c8a
+}

@@ -35,7 +35,7 @@ nav{
     background:#f0f2ff;
     position: fixed;
     top: 10px;
-    z-index: 10;
+    z-index: 1;
     border-top:solid 3px #040C53;
     /* left: 50%; */
 }
@@ -172,3 +172,17 @@ button:hover{
 
     }
 }
+
+
+.alert{
+    z-index: 10;
+}
+#alert-error{
+    background:rgb(95, 3, 26);
+    color: #ff7373;
+}
+#alert-success{
+    background:rgb(182, 255, 188);
+    color: #0B480A;
+}
+
