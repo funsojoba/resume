@@ -42,6 +42,19 @@ def index(request):
         
         return redirect('thanks')
 
+        # try:
+        #     send_mail(
+        #         subject,
+        #         senders_message,
+        #         email,
+        #         ['hrfunsojoba@gmail.com'],
+        #         fail_silently=False,
+        #     )
+        #     messages.success(request, 'Mail sent, thank you')
+        #     return render(request, 'index.html')
+        # except Exception as err:
+        #     messages.error(request, f'Something went wrong: {err}')
+        #     return render(request, 'index.html')
     return render(request, 'index.html')
 
 
