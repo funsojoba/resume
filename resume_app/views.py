@@ -50,7 +50,7 @@ def index(request):
             )
             messages.success(request, 'Mail sent, thank you')
             return render(request, 'index.html')
-        except Exception:
-            messages.error(request, 'Something went wrong')
+        except Exception as err:
+            messages.error(request, f'Something went wrong: {err}')
             return render(request, 'index.html')
     return render(request, 'index.html')
