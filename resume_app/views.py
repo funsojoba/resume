@@ -1,5 +1,5 @@
 from django.core import mail
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.core.mail import send_mail
 from validate_email import validate_email
@@ -40,17 +40,10 @@ def index(request):
 
         senders_message = f'You have a message from {email}\n {message}'
         
-        try:
-            send_mail(
-                subject,
-                senders_message,
-                email,
-                ['hrfunsojoba@gmail.com'],
-                fail_silently=False,
-            )
-            messages.success(request, 'Mail sent, thank you')
-            return render(request, 'index.html')
-        except Exception as err:
-            messages.error(request, f'Something went wrong: {err}')
-            return render(request, 'index.html')
+        return redirect('thanks')
+
     return render(request, 'index.html')
+
+
+def thanks(request):
+    return render(request, 'thanks.html')
